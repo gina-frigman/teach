@@ -1,0 +1,87 @@
+<!DOCTYPE html> 
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="./index.css">
+    <title>Научи препода</title>
+  </head>
+  <body class="body">
+    <header class="header">
+        <a href="#main" class="header__link">главная</a>
+        <a href="#parallax" class="header__link">параллакс</a>
+        <a href="#video" class="header__link">видео</a>
+        <a href="#hover" class="header__link">hover</a>
+    </header>
+    <a class="up" href="#main"></a>
+    <main class="main" id="main">
+        <h1 class="main__header">приветствую на шоу <br> “научи препода”</h1>
+        <div class="main__mem">
+            <p class="main__text">мне очень нравится этот мем, так что он будет тут</p>
+            <img src="./img/chill.png" class="main__img" alt="чилловый парень" />
+        </div>
+    </main>
+    <section class="trick trick_parallax" id="parallax">
+        <div class="trick_parallax-layer"></div>
+        <div class="trick__content">
+            <h2 class="trick__header trick__header_dark">параллакс-эффект</h2>
+            <p class="trick__text trick__text_parallax">параллакс - это эффект трехмерного изображения, 
+                когда задний фон прокручивается медленнее, чем передний. в целом, это нужно только для 
+                эстетического удовольствия, определенной пользы в нем нет. однако благодаря нему сайт 
+                запоминается, и пользователь чувствует заинтересованность.<br> <br> создать его не так сложно, как кажется: 
+                для этого в css нужно прописать глубину объекта с помощью transform: translateZ(кол-во px) 
+                и perspective(кол-во px). нужно понимать, что, если подвинуть объект по оси z, он станет 
+                меньше. для решения проблемы можно использовать scale(число), которое увеличит объект.</p>
+        </div>
+    </section>
+    <section class="trick trick_video" id="video">
+        <div class="trick__darker">
+            <video class="trick__video" src="./img/chill-guy.mp4" type="video/mp4" autoplay muted loop></video>
+            <div class="content">
+                <p class="content__text">я просто чилловый парень</p>
+            </div>            
+        </div>
+        <h2 class="trick__header">видео-фон</h2>
+        <p class="trick__text">добавить видео в качестве фона на сайте легко: в html нужно прописать тег 
+            &lt;video&gt;&lt;/video&gt; с аттрибутами src=’ссылка’, type=’video/mp4’, а затем по желанию 
+            добавить autoplay, muted и loop. после этого нужно создать блок, благодаря которому можно 
+            затемнить видео. для этого в стилях блока нужно указать background-color: rgba(0, 0, 0, .6). 
+            и потом напишем текст. для наложения объектов друг на друга нужно прописать им одинаковые 
+            высоту и ширину, а также указать в стилях position: absolute, top: 0, left: 0. готово!</p>
+    </section>
+    <section class="trick" id="hover">
+        <h2 class="trick__header">hover-эффект</h2>
+        <p class="trick__text ">hover-эффект имеет огромное множество вариантов использования. 
+            по факту это изменение объекта при наведении курсора: <a class="trick__text trick__text_color">цвет</a>,
+            <a class="trick__text trick__text_appear">проявление</a>, <a class=" trick__text trick__text_scale">увеличение</a>,
+            <a class="trick__text trick__text_rotate">поворот</a> и т.д.<br><br> 
+            для того, чтобы у объекта была реакция на курсор, нужно прописать ему стиль при наведении 
+            мышки название_объекта:hover {}. там и будут записаны все операции, например, color: white, transform: 
+            rotate(180deg), scale(1.5), opacity: .5. для плавности перехода от исходного к измененному состоянию используют 
+            transition: свойство длительность скорость_перехода задержка.</p>
+    </section>
+    <section class="trick">
+        <h2 class="trick__header">на этом все!</h2>
+        <p class="trick__text">конечно, это далеко не все возможности веб-разработчиков, но я джун, который ниче не помнит&#41;&#41; 
+            да и в любом случае, я бы не успела рассказать что-либо сложное из-за ограничений во времени и моих способностях 
+            в объяснениях. надеюсь, вам было интересно и понятно, и вы смогли подчерпнуть для себя что-то новое. спасибо за внимание, 
+            буду рада ответить на все вопросы!</p>
+        <div class="mem">
+            <p class="mem__text">не терпи, господь с тобой закончил</p>
+            <img class="mem__img" src="./img/patience.png" alt="игрушка" />
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__column">
+            <p class="footer__text">автор: джина фригман</p>
+            <p class="footer__text">создано в учебных целях</p>
+            <p class="footer__text">&copy;2024</p>
+        </div>
+        <div class="footer__column">
+            <p class="footer__text">github: <a target="_blank" href="https://github.com/gina-frigman" class="footer__link">gina-frigman</a></p>
+            <p class="footer__text">почта: jina-3@ya.ru</p>
+            <p class="footer__text">tg: <a target="_blank" href="https://t.me/gina_reinholds" class="footer__link">@gina_reinholds</a></p>            
+        </div>
+    </footer>
+  </body>
+</html>
